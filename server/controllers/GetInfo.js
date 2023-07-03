@@ -9,7 +9,7 @@ export const getUser = async (req, res) => {
         const sortDirectionPercentage = ascPercentage === 'true' ? 1 : 0;
 
         if (ascName === 'true') {
-            const sortedData = await Info.find().sort({ name: sortDirectionName });
+            const sortedData = await Info.find().sort({ fullName: sortDirectionName });
             res.status(200).json(sortedData);
         } else if (ascAge === 'true') {
             const sortedData = await Info.find().sort({ age: sortDirectionAge });
