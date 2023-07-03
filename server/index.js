@@ -4,8 +4,10 @@ import dotenv from 'dotenv'
 import userRoute from './routes/Info.js'
 import getUserRoute from './routes/GetInfo.js'
 import getSearchRoute from './routes/SearchInfo.js'
+import cors from 'cors'
 
 const app = express()
+app.use(cors())
 dotenv.config()
 
 const connect = async () => {
